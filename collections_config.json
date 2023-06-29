@@ -1,0 +1,35 @@
+[
+    {
+        "name": "patPvtCollection",
+        "policy": "OR('committeemsp.member', 'votermsp.member' )",
+        "requiredPeerCount": 1,
+        "maxPeerCount": 1,
+        "blockToLive": 1000000,
+        "memberOnlyRead": true,
+        "memberOnlyWrite": true
+    },
+    {
+        "name": "committeemspPrivateCollection",
+        "policy": "OR('committeemsp.member')",
+        "requiredPeerCount": 0,
+        "maxPeerCount": 3,
+        "blockToLive":3,
+        "memberOnlyRead": true,
+        "memberOnlyWrite": false,
+        "endorsementPolicy": {
+          "signaturePolicy": "OR('committeemsp.member')"
+        }
+      },
+    {
+        "name": "votermspPrivateCollection",
+        "policy": "OR('votermsp.member')",
+        "requiredPeerCount": 0,
+        "maxPeerCount": 3,
+        "blockToLive":3,
+        "memberOnlyRead": true,
+        "memberOnlyWrite": false,
+        "endorsementPolicy": {
+          "signaturePolicy": "OR('votermsp.member')"
+        }
+      }
+]
