@@ -45,6 +45,7 @@ type Election struct {
 	CreatedAt   string `json:"createdAt"`
 	UpdatedAt   string `json:"updateAt"`
 	Description string `json:"description"`
+	Voters      []Voter `json: "voters"`
 }
 
 type ElectionCount struct {
